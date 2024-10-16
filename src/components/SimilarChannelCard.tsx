@@ -6,7 +6,7 @@ import { Image } from "antd";
 import { Link } from "react-router-dom";
 
 export function SimilarChannelCard(similar_channel_id: any) {
-  const { isLoading, data } = useGetChannelHistoryQuery({
+  const { data } = useGetChannelHistoryQuery({
     site: "di",
     channel_id: similar_channel_id.channelId,
   });
@@ -23,7 +23,7 @@ export function SimilarChannelCard(similar_channel_id: any) {
   //   console.log(items);
   const track = item;
 
-  items?.map((item) => {
+  items?.map((item: { id: unknown; name: string }) => {
     if (item.id === similar_channel_id.channelId) {
       nameChannel = item.name;
       //   const track = item.id;

@@ -1,4 +1,4 @@
-import { UITrack } from "../models/models";
+import { UITrack } from "../models/models.js";
 import { Link } from "react-router-dom";
 import { useGetNameStationQuery } from "../store/audioaddict/audioaddict.api";
 import { Image } from "antd";
@@ -19,7 +19,7 @@ export function TrackCard({
   let nameChannel: string = "";
   const items = data && Object.values(data);
 
-  items?.map((item) => {
+  items?.map((item: { id: number; name: string }) => {
     if (item.id === track.channel_id) {
       nameChannel = item.name;
       // console.log(item.description_long);

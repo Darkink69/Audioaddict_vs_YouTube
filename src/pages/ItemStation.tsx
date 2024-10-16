@@ -4,8 +4,8 @@ import {
   useGetNameStationQuery,
 } from "../store/audioaddict/audioaddict.api";
 import { Image } from "antd";
-import { SimilarChannelCard } from "../components/SimilarChannelCard";
-import { PreviousTrackCard } from "../components/PreviousCard";
+import { SimilarChannelCard } from "../components/SimilarChannelCard.js";
+import { PreviousTrackCard } from "../components/PreviousCard.js";
 import { useState, useEffect, useRef } from "react";
 import { Progress } from "antd";
 

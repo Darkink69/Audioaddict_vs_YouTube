@@ -5,15 +5,15 @@ import { setupListeners } from "@reduxjs/toolkit/query";
 import { audioaddictApi } from "./audioaddict/audioaddict.api";
 
 export const store = configureStore({
-    reducer: {
-        // [githubApi.reducerPath]: githubApi.reducer,
-        [audioaddictApi.reducerPath]: audioaddictApi.reducer,
-        // github: githubReducer
-    },
-    middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(audioaddictApi.middleware)
-})
+  reducer: {
+    // [githubApi.reducerPath]: githubApi.reducer,
+    [audioaddictApi.reducerPath]: audioaddictApi.reducer,
+    // github: githubReducer
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(audioaddictApi.middleware),
+});
 
-setupListeners(store.dispatch)
+setupListeners(store.dispatch);
 
-export type RootState = ReturnType<typeof store.getState>
+export type RootState = ReturnType<typeof store.getState>;

@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 // import { UITrack } from "../../models/models";
-import { TrackHistoryResponse, Root2 } from "../../models/models";
+import { TrackHistoryResponse, Root2 } from "../../models/models.ts";
 
 // const siteName = localStorage.getItem("site");
 // const channel_id = "69";

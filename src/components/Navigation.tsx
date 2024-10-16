@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Input } from "antd";
-import type { SearchProps } from "antd/es/input/Search";
+// import type { SearchProps } from "antd/es/input/Search.js";
 import { Select } from "antd";
 
 const { Search } = Input;
-const onSearch: SearchProps["onSearch"] = (value, _e, info) =>
-  console.log(info?.source, value);
+// const onSearch: SearchProps["onSearch"] = (
+//   value: unknown,
+//   _e: unknown,
+//   info: { source: unknown }
+// ) => console.log(info?.source, value);
 
 export function Navigation({
   onSiteChanged,
@@ -46,7 +49,7 @@ export function Navigation({
       <Search
         className="pl-4"
         placeholder="search radio or track"
-        onSearch={onSearch}
+        // onSearch={onSearch}
         style={{ width: 200 }}
       />
     </nav>

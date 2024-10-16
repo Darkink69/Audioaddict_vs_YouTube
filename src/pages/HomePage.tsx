@@ -1,6 +1,7 @@
-import { useTrackHistoryQuery } from "../store/audioaddict/audioaddict.api";
-import { TrackCard } from "../components/TrackCard";
+import { useTrackHistoryQuery } from "../store/audioaddict/audioaddict.api.js";
+import { TrackCard } from "../components/TrackCard.js";
 import { useEffect } from "react";
+import { UITrack } from "../models/models.ts";
 
 export function HomePage({ siteName }: { siteName: string }) {
   const { isLoading, isError, data } = useTrackHistoryQuery(
@@ -42,7 +43,7 @@ export function HomePage({ siteName }: { siteName: string }) {
       )}
       {items ? (
         <div className="grid gap-4 grid-cols-2 md:grid-cols-5 lg:grid-cols-6 sm:grid-cols-4">
-          {items.map((item) => (
+          {items.map((item: UITrack) => (
             <TrackCard track={item} key={item.channel_id} siteName={siteName} />
           ))}
         </div>
